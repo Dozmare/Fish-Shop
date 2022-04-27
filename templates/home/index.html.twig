@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="fiche-titre">
+		<hr class="my-4"/>
+		Nouveautés
+		<hr class="my-4"/>
+	</div>
+	<div class="nouveaux container px-4 px-lg-5">
+		{% for produit in produitList %}
+			{% if produit.etat =="Nouveau" %}
+				<div class="card col-xs-12 col-sm-4">
+						<!-- Post preview-->
+						<div class="post-preview">
+							<a href="/produit/{{produit.name}}">
+								<img src="{{produit.picture}}" class="card-img">
+								<h2 class="post-title">{{produit.name}}</h2>
+								<h3 class="post-subtitle">{{produit.price}}€</h3>
+							</a>
+						</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+{% endblock %}

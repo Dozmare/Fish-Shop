@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="fiche-titre">
+		<hr class="my-4"/>
+            Votre Panier
+		<hr class="my-4"/>
+		<i class="fa-solid fa-bell"></i>
+	</div>
+
+
+	<div>
+		{% for panier in panierList %}
+			<div class="card card-panier">		
+					<!-- Post preview-->
+					<p>Nom du produit : {{ panier.idProduit.name }}</p>
+					Quantité: {{panier.quantite}}<br />
+					Prix total : {{ panier.quantite * panier.idProduit.price }} €
+					</br>
+					{% if panier.etat ? 'Validé':'En cours' =="En cours" %}
+						<p class="btnencours">En cours</p>
+
+					{% else %}
+						<p class="btnpanier">Validé</p>
+					{% endif %}
+				
+			</div>
+			<hr class="my-4"/>
+		{% endfor %}
+	</div>
+
+{% endblock %}

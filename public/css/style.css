@@ -1,0 +1,167 @@
+.site-heading {
+  color: white;
+}
+
+.masthead{
+  max-height: 20%;
+
+}
+
+.stockout{
+  background-color: red;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  margin-right: auto;
+  padding: 10px;
+  max-width: 50%;
+}
+
+.fiche-titre {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 26px;
+  position: relative;
+  font-weight: 700;
+  margin: 25px 0px !important;
+}
+
+.my-4{
+    color: #666;
+}
+
+.nouveaux{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.card {
+  height: 330px;
+  width: 300px;
+  text-align: center;
+  justify-content: center;
+  margin: 10px;
+  border: 0 !important;
+  border-radius: 25px !important;
+}
+
+.card-img{
+  max-width: 200px;
+  height: 150px;
+}
+
+
+.containerprod {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  box-shadow: 5px 5px 5px 5px lightgray;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.fiche {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  
+}
+.fiche > img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  object-fit: cover;
+}
+
+.title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.panier {
+  display: flex;
+  margin-top: 100px;
+}
+.card-panier{
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
+  max-height: 210px;
+}
+.btnencours{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  border-radius: 12px;
+  text-decoration: none;
+  background: rgb(216, 153, 35) !important;
+  color: white;
+  padding: 10px;
+}
+.numberpanier{
+  width: 110px;
+  margin: 10px;
+}
+
+.btnpanier {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  border-radius: 12px;
+  text-decoration: none;
+  background: rgb(30, 190, 38) !important;
+  color: white;
+  padding: 10px;
+}
+
+.btnpanier:hover{
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
+  background-color: rgb(32, 138, 38);
+}
+
+
+.form-login{
+  max-width: 40%;
+  margin: 20px;
+}
+
+label[for="registration_form_email"],
+label[for="registration_form_plainPassword"],
+label[for="registration_form_name"],
+label[for="registration_form_lastName"],
+label[for="registration_form_adress"],
+label[for="registration_form_zipCode"],
+label[for="registration_form_city"],
+label[for="registration_form_greeTerms"]
+{
+  margin-left: 20px;
+}
+
+
+.nav-link{
+  border-bottom:transparent solid 2px;
+}
+
+.nav-link:hover{
+  border-bottom:#666 solid 2px;
+}
+
+.emptyList{
+  color: #666;
+  justify-content: center;
+  display: flex;
+  margin: 20px;
+  font-size: larger;
+}
+
+@media screen and (max-width: 800px)
+{
+    .fiche{
+      flex-wrap: wrap;
+    }
+}
+

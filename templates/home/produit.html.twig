@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="fiche-titre">
+		<hr class="my-4"/>
+		Fiche produit
+		<hr class="my-4"/>
+	</div>
+	<div class="containerprod">
+		<div class="fiche">
+
+			<img src="{{produit.picture}}">
+			<div class="description">
+				<div class="title">
+					<h2>{{produit.name}}</h2>
+				</div>
+				<p>
+					{{produit.description}}
+
+				</p>
+
+				<p class="title">Notre prix unité :
+					{{produit.price}}€
+                </p>
+			{% if app.user %}
+                {% if produit.stock <= 0 %}
+					<div class="stockout">
+						<p>Produit en rupture de stock</p>
+					</div>
+					{% else %}
+						<div class="panier">
+							{{form_start(form)}}
+
+								{{ form_label(form.quantite, 'Quantité') }}
+								{{ form_widget(form.quantite, {'attr' : {'class' : ''}}) }}
+								<button type="submit" class="btnpanier">Ajouter au panier</button>
+							{{form_end(form)}}
+						</div>
+				{% endif %}
+			{% endif %}	
+			</div>
+		</div>
+
+
+
+
+	</div>
+{% endblock %}

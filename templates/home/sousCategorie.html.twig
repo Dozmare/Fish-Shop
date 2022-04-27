@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="fiche-titre">
+		<hr class="my-4"/>
+		Catalogue
+		<hr class="my-4"/>
+	</div>
+	<div class="nouveaux container px-4 px-lg-5">
+		{% for sousCategorie in sousCategorieList %}
+			<div class="card col-xs-12 col-sm-4">
+				<div class="">
+					<!-- Post preview-->
+					<div class="post-preview">
+						<a href="{{path('produit_id',{'categId':sousCategorie.id})}}">
+							<img src="{{sousCategorie.picture}}" class="card-img">
+							<h2 class="post-title">{{sousCategorie.name}}</h2>
+						</a>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
