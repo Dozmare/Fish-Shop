@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="fiche-titre">
+		<hr class="my-4"/>
+            Profil
+		<hr class="my-4"/>
+	</div>
+	<div class="container px-4 px-lg-5">
+        Nom : {{app.user.name}}<br>
+        Prénom : {{app.user.lastname}} <br>
+        Email : {{app.user.email}} <br>
+        Adresse : {{app.user.adress}}  <br>
+        Ville : {{app.user.city}}  <br>
+        Code postal : {{app.user.zipCode}} <br>
+
+	</div>
+{% endblock %}

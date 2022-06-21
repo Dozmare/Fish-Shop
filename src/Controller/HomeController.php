@@ -134,4 +134,19 @@ class HomeController extends AbstractController
 
     }
 
+        /**
+     * @Route("/profil", name="profil")
+     */
+    public function profilAffich(CategorieRepository $cat): Response
+    {
+        $categList = $cat->findAll();
+
+
+        return $this->render('home/profil.html.twig', [
+            'controller_name' => 'HomeController',
+            'categorieList' => $categList,
+
+        ]);
+    }
+
 }
